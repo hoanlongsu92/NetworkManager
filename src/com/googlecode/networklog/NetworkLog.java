@@ -28,7 +28,6 @@ import android.view.LayoutInflater;
 import android.util.Log;
 import android.app.ActivityManager;
 import android.app.ActivityManager.RunningServiceInfo;
-
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -37,7 +36,6 @@ import android.support.v4.view.ViewPager;
 
 import com.viewpagerindicator.TitlePageIndicator;
 import com.viewpagerindicator.TitleProvider;
-
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
@@ -579,7 +577,7 @@ public class NetworkLog extends SherlockFragmentActivity {
     }
 
   @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
+    public boolean onCreateOptionsMenu(Menu menu) {	        
       MenuInflater inflater = getSupportMenuInflater();
       inflater.inflate(R.layout.menu, menu);
       return true;

@@ -1,8 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <resources>
+    
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+
+    </style>
   <style name="Divider">
     <item name="android:layout_width">match_parent</item>
     <item name="android:layout_height">1dp</item>
     <item name="android:background">?android:attr/listDivider</item>
   </style>
+  <style name="Widget.MyTitlepageIndicator">
+    <item name="footerColor">#ff99cc33</item>
+    <item name="footerIndicatorStyle">underline</item>
+    <item name="footerIndicatorHeight">3dp</item>
+    <item name="footerLineHeight">1.5dp</item>
+    <item name="footerPadding">6dp</item>
+    <item name="selectedColor">#ffffffff</item>
+     <item name="android:textColor">#FF0000</item>
+</style>
+
 </resources>
