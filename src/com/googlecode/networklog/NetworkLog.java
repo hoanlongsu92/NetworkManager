@@ -665,10 +665,10 @@ public class NetworkLog extends SherlockFragmentActivity {
         case R.id.exit:
           finish();
           break;
-        case R.id.feedback:
-          feedbackDialog = new FeedbackDialog(this);
-          feedbackDialog.show();
-          break;
+//        case R.id.feedback:
+//          feedbackDialog = new FeedbackDialog(this);
+//          feedbackDialog.show();
+//          break;
         case R.id.export:
           exportDialog = new ExportDialog(this);
           exportDialog.show();

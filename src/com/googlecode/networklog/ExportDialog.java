@@ -173,7 +173,7 @@ public class ExportDialog
   }
 
   private String defaultFilename() {
-    return "networklog-" + dateFilenameFormat.format(startDate) + "-" + dateFilenameFormat.format(endDate) + ".csv";
+    return "nhatkyketnoi-" + dateFilenameFormat.format(startDate) + "-" + dateFilenameFormat.format(endDate) + ".csv";
   }
 
   private void updateFilename() {

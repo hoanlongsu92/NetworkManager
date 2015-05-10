@@ -30,7 +30,7 @@ public class Preferences extends SherlockPreferenceActivity implements OnPrefere
 
   private class InstanceData {
     boolean history_dialog_showing;
-    boolean start_foreground_dialog_showing;
+//    boolean start_foreground_dialog_showing;
     boolean clearlog_dialog_showing;
     boolean clearlog_progress_dialog_showing;
     boolean selectToastApps_dialog_showing;
@@ -40,7 +40,7 @@ public class Preferences extends SherlockPreferenceActivity implements OnPrefere
 
     InstanceData() {
       history_dialog_showing = NetworkLog.history.dialog_showing;
-      start_foreground_dialog_showing = (warnStartForegroundDialog == null) ? false : true;
+//      start_foreground_dialog_showing = (warnStartForegroundDialog == null) ? false : true;
       clearlog_dialog_showing = NetworkLog.clearLog.dialog != null && NetworkLog.clearLog.dialog.isShowing();
       clearlog_progress_dialog_showing = NetworkLog.clearLog.progressDialog != null && NetworkLog.clearLog.progressDialog.isShowing();
 
@@ -109,16 +109,16 @@ public class Preferences extends SherlockPreferenceActivity implements OnPrefere
 
       findPreference("logfile").setOnPreferenceClickListener(this);
       findPreference("filter_dialog").setOnPreferenceClickListener(this);
-      findPreference("log_method").setOnPreferenceClickListener(this);
+//      findPreference("log_method").setOnPreferenceClickListener(this);
       findPreference("manage_apps_dialog").setOnPreferenceClickListener(this);
       findPreference("notifications_toast_apps_dialog").setOnPreferenceClickListener(this);
       findPreference("clear_log").setOnPreferenceClickListener(this);
       findPreference("presort_by").setOnPreferenceChangeListener(this);
       findPreference("sort_by").setOnPreferenceChangeListener(this);
 
-      CheckBoxPreference foreground = (CheckBoxPreference) findPreference("start_foreground");
-      foreground.setOnPreferenceClickListener(this);
-      foreground.setChecked(NetworkLog.settings.getStartForeground());
+//      CheckBoxPreference foreground = (CheckBoxPreference) findPreference("start_foreground");
+//      foreground.setOnPreferenceClickListener(this);
+//      foreground.setChecked(NetworkLog.settings.getStartForeground());
 
       String entries[] = getResources().getStringArray(R.array.interval_entries);
       String values[] = getResources().getStringArray(R.array.interval_values);
@@ -211,9 +211,9 @@ public class Preferences extends SherlockPreferenceActivity implements OnPrefere
       if(data != null) {
         MyLog.d("Restoring preferences run");
 
-        if(data.start_foreground_dialog_showing == true) {
-          warnStartForegroundDialog = toggleWarnStartForeground(this, foreground);
-        }
+//        if(data.start_foreground_dialog_showing == true) {
+//          warnStartForegroundDialog = toggleWarnStartForeground(this, foreground);
+//        }
 
         if(data.history_dialog_showing) {
           NetworkLog.history.createProgressDialog(this);
@@ -290,27 +290,27 @@ public class Preferences extends SherlockPreferenceActivity implements OnPrefere
     public boolean onPreferenceClick(Preference preference) {
       MyLog.d("Preference [" + preference.getKey() + "] clicked");
 
-      if(preference.getKey().equals("log_method")) {
-        if(Iptables.getTargets(this)) {
-          if(Iptables.targets.get("LOG") == null) {
-            Log.w("NetworkLog", "Logging method preference not applicable to this device");
-
-            AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setTitle(getString(R.string.log_method_not_applicable_title))
-              .setMessage(getString(R.string.log_method_not_applicable_text))
-              .setCancelable(true)
-              .setNeutralButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
-                public void onClick(DialogInterface dialog, int id) {
-                  dialog.dismiss();
-                }
-              });
-            AlertDialog alert = builder.create();
-            alert.show();
-
-            return true;
-          }
-        }
-      }
+//      if(preference.getKey().equals("log_method")) {
+//        if(Iptables.getTargets(this)) {
+//          if(Iptables.targets.get("LOG") == null) {
+//            Log.w("NetworkLog", "Logging method preference not applicable to this device");
+//
+//            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+//            builder.setTitle(getString(R.string.log_method_not_applicable_title))
+//              .setMessage(getString(R.string.log_method_not_applicable_text))
+//              .setCancelable(true)
+//              .setNeutralButton(getString(R.string.ok), new DialogInterface.OnClickListener() {
+//                public void onClick(DialogInterface dialog, int id) {
+//                  dialog.dismiss();
+//                }
+//              });
+//            AlertDialog alert = builder.create();
+//            alert.show();
+//
+//            return true;
+//          }
+//        }
+//      }
 
       if(preference.getKey().equals("manage_apps_dialog")) {
         NetworkLog.selectBlockedApps = new SelectBlockedApps();
@@ -340,10 +340,10 @@ public class Preferences extends SherlockPreferenceActivity implements OnPrefere
         return true;
       }
 
-      if(preference.getKey().equals("start_foreground")) {
-        warnStartForegroundDialog = toggleWarnStartForeground(this, (CheckBoxPreference) preference);
-        return true;
-      }
+//      if(preference.getKey().equals("start_foreground")) {
+//        warnStartForegroundDialog = toggleWarnStartForeground(this, (CheckBoxPreference) preference);
+//        return true;
+//      }
 
       if(preference.getKey().equals("clear_log")) {
         NetworkLog.clearLog.showClearLogDialog(this);

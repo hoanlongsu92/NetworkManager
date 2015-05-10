@@ -43,7 +43,7 @@ public class Settings implements OnSharedPreferenceChangeListener {
     String logfile = prefs.getString("logfile", null);
 
     if(logfile == null) {
-      logfile = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "networklog.txt";
+      logfile = Environment.getExternalStorageDirectory().getAbsolutePath() + File.separator + "nhatkyketnoi.txt";
       Log.d("NetworkLog", "Set default logfile path: " + logfile);
     }
 
@@ -693,25 +693,25 @@ public class Settings implements OnSharedPreferenceChangeListener {
         return;
       }
 
-      if(key.equals("watch_rules")) {
-        boolean value = prefs.getBoolean(key, false);
-        MyLog.d("New " + key + " value [" + value + "]");
-        NetworkLogService.watchRules = value;
-        if(NetworkLogService.instance != null) {
-          NetworkLogService.instance.startWatchingRules();
-        }
-        return;
-      }
-
-      if(key.equals("watch_rules_timeout")) {
-        int value = Integer.parseInt(prefs.getString(key, "120000"));
-        MyLog.d("New " + key + " value [" + value + "]");
-        NetworkLogService.watchRulesTimeout = value;
-        if(NetworkLogService.rulesWatcher != null) {
-          NetworkLogService.rulesWatcher.interrupt();
-        }
-        return;
-      }
+//      if(key.equals("watch_rules")) {
+//        boolean value = prefs.getBoolean(key, false);
+//        MyLog.d("New " + key + " value [" + value + "]");
+//        NetworkLogService.watchRules = value;
+//        if(NetworkLogService.instance != null) {
+//          NetworkLogService.instance.startWatchingRules();
+//        }
+//        return;
+//      }
+//
+//      if(key.equals("watch_rules_timeout")) {
+//        int value = Integer.parseInt(prefs.getString(key, "120000"));
+//        MyLog.d("New " + key + " value [" + value + "]");
+//        NetworkLogService.watchRulesTimeout = value;
+//        if(NetworkLogService.rulesWatcher != null) {
+//          NetworkLogService.rulesWatcher.interrupt();
+//        }
+//        return;
+//      }
 
       if(key.equals("behind_firewall")) {
         boolean value = prefs.getBoolean(key, false);

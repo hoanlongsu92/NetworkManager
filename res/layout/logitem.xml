@@ -22,7 +22,8 @@
     android:layout_height="wrap_content"
     android:paddingRight="10dp"
     android:layout_toLeftOf="@id/logInterface"
-    android:layout_toRightOf="@id/logIcon" />
+    android:layout_toRightOf="@id/logIcon"
+    android:textStyle="bold" />
 
   <TextView
     android:id="@+id/srcPort"

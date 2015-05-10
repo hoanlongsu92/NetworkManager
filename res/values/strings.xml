@@ -15,8 +15,8 @@
   <string name="logging_started">Bắt đầu theo dõi kết nối</string>
   <string name="logging_stopped">Đã ghi nhật ký kết nối</string>
   <string name="logging_active">Nhật ký đang hoạt động</string>
-  <string name="logging_inactive">Nhật ký đang dừng</string>
-  <string name="logfile_size">\u0020Kích thước tập tin nhật kí:\u0020</string>
+  <string name="logging_inactive">Nhật ký đã dừng</string>
+  <string name="logfile_size">\u0020Kích thước nhật kí:\u0020</string>
   <string name="logfile_bad">\u0020Nhật ký hỏng:\u0020</string>
 
   <string name="hostitem_sent">\u0020\u0020Gửi:\u0020</string>
@@ -198,9 +198,9 @@
   <string name="pref_resolve_hosts_summary">Phân giải địa chỉ IP sang tên miền</string>
   <string name="pref_resolve_ports_title">Phân giải cổng kết nối</string>
   <string name="pref_resolve_ports_summary">Phân giải tên các cổng đã biết sang tên dịch vụ tương ứng</string>
-  <string name="pref_copy_addrs_title">Sao chép các địa chỉ không thể phân giải</string>
+  <string name="pref_copy_addrs_title">Chép địa chỉ không thể phân giải</string>
   <string name="pref_copy_addrs_summary">Khi sao chép vào clipboard, sử dụng địa chỉ/cổng ban đầu thay vì các địa chỉ đã phân giải</string>
-  <string name="pref_invert_upload_download_title">Chuyển đổi tải lên/tải xuống</string>
+  <string name="pref_invert_upload_download_title">Chuyển đổi UpLoads/Downloads</string>
   <string name="pref_invert_upload_download_summary">Mặc định, tốc độ lưu lượng được hiển thị tải lên/tải xuống; Chọn để hiện thị ngược lại</string>
   <string name="pref_behind_firewall_title">Nhật ký sau tường lửa</string>
   <string name="pref_behind_firewall_summary">Nếu được chọn, các gói tin sẽ được ghi sau khi được chấp nhận bởi tường lửa</string>
@@ -230,10 +230,10 @@
 
   <string name="pref_log_service">Dịch vụ nhật ký</string>
   <string name="pref_logfile_title">Vị trí lưu tập tin nhật ký</string>
-  <string name="pref_logfile_summary">Cài đặt đường dẫn và tên tập tin (mặc định là networklog.txt tại root của bộ nhớ ngoài)</string>
+  <string name="pref_logfile_summary">Cài đặt đường dẫn và tên tập tin (mặc định là nhatkyketnoi.txt tại root của bộ nhớ ngoài)</string>
   <string name="pref_watch_rules_title">Giám sát Iptables</string>
   <string name="pref_watch_rules_summary">Áp dụng lại quy tắc ghi để quy tắc iptables mới nếu có thay đổi trong các quy tắc xảy ra (đảm bảo các quy định ghi không bị loại bỏ bởi các ứng dụng khác)</string>
-  <string name="pref_watch_rules_timeout_title">Kiểm tra quy tắc các khoảng thời gianCheck rules interval</string>
+  <string name="pref_watch_rules_timeout_title">Kiểm tra quy tắc các khoảng thời gian</string>
   <string name="pref_watch_rules_timeout_summary">Chọn thời gian kiểm tra quy tắc của iptables để sửa đổi</string>
   <string name="pref_atboot_title">Chạy ứng dụng khi khởi động</string>
   <string name="pref_atboot_summary">Bắt đầu ghi nhật ký khi thiết bị khời động lên</string>
